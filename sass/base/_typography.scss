@@ -1,11 +1,14 @@
 
 //typography CSS
 
+$title-font: 'Exo', sans-serif;
+$text-font: 'Montserrat', sans-serif;
+
 html {
-  font-size: 18px; 
+  font-size: 16px; 
 }
 
 body {
-  font-family: sans-serif;
+  font-family: $text-font;
   line-height: 1.4;
 }
