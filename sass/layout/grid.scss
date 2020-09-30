@@ -3,7 +3,7 @@
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 150px 15px;
+  padding: 150px 50px;
 }
 
 .container-small {
@@ -16,4 +16,10 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .container {
+    padding: 150px 15px;
+  }
 }

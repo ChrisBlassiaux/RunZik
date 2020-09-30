@@ -163,6 +163,13 @@ body {
     width: auto;
   }
 }
+.title {
+  font-size: 1.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 html {
   font-size: 16px;
 }
@@ -185,10 +192,17 @@ body {
   font-weight: 300;
 }
 
+.title {
+  font-size: 1.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 150px 15px;
+  padding: 150px 50px;
 }
 
 .container-small {
@@ -203,6 +217,11 @@ body {
   padding: 0 15px;
 }
 
+@media only screen and (min-width: 1100px) {
+  .container {
+    padding: 150px 15px;
+  }
+}
 .container-navbar {
   height: 100%;
   display: flex;
@@ -397,6 +416,12 @@ body {
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
+}
+
+.range-bloc-img {
+  height: 400px;
+  width: 100%;
+  background: center/cover no-repeat url(images/montre_connecte_red.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */

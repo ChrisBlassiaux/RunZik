@@ -19,13 +19,17 @@ burger.addEventListener('click', function () {
     filterNav.style.display = 'none';
   }
 });
-console.log(products)
+
 products.addEventListener('click', function () {
   if (navProducts.style.display == 'none') {
     navProducts.style.display = 'flex';
-    filterNav.style.display = 'block';
+    if (window.innerWidth > 850) {
+      filterNav.style.display = 'block';
+    }
   } else {
     navProducts.style.display = 'none';
-    filterNav.style.display = 'none';
+    if (window.innerWidth > 850) {
+      filterNav.style.display = 'none';
+    }
   }
 })
