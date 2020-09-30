@@ -79,11 +79,27 @@
   background-color: $text-secondary;
 }
 
+// products nav
+
+.nav-products {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-products img {
+  width: 100px;
+}
+
+.nav-product-bloc-text {
+  margin: 0 15px;
+  display: block;
+}
+
 // jumbotron
 
 .jumbotron {
   height: 600px;
-  margin-top: 10px;
 
   background: fixed left / cover no-repeat url(/images/runner.jpg);
 }
@@ -104,6 +120,27 @@
  margin: 30px 0;
 
  font-weight: $weight-bold;
+}
+
+//class for js burger
+.fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.filter-nav {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background-color: #000;
+
+  opacity: .7;
 }
 
 @media only screen and (min-width: 850px) {
@@ -151,6 +188,24 @@
 
   .jumbotron-presentation {
     padding-top: 110px;
+  }
+
+  // products nav
+
+  .nav-products {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: $bg-light;
+  }
+
+  .nav-products img {
+    width: 170px;
+  }
+
+  .nav-product-bloc-text {
+    margin: 0 15px;
+    display: block;
   }
 }
  
