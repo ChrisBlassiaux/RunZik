@@ -1,4 +1,4 @@
-
+// navbar
 
 .container-navbar {
   height: 100%;
@@ -8,11 +8,6 @@
 }
 
 .navbar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-
   font-family: $title-font;
   text-transform: uppercase;
 
@@ -23,11 +18,139 @@
   box-shadow: 0px 14px 46px 0px rgba(0,0,0,0.05);
 } 
 
-.nav a {
-  display: inline-block;
-  padding: 37.5px 27.5px;
+// nav
+
+.nav {
+  display: none;
+  position: absolute;
+  top: 84px;
+  left: 0;
+  right: 0;
+
+  background-color: $bg-light;
 }
 
-.nav a:last-child {
-  padding-right: 0;
+.nav a {
+  display: inline-block;
+  width: 100%;
+  margin: 15px 0;
+  padding-bottom: 10px;
+
+  text-align: center;
+
+  transition: .3s;
+
+  border-bottom: 2px solid #FFF;
 }
+
+.nav a:hover {
+  color: $text-primary;
+  border-bottom: 2px solid $text-primary;
+}
+
+// burger-nav
+
+.burger-nav {
+  position: relative;
+ 
+  cursor: pointer;
+}
+
+.burger-nav::before {
+  content: '';
+  display: inline-block;
+  height: 3px;
+  width: 35px;
+  position: absolute;
+  top: -7px;
+  left: 3px;
+  
+  background-color: $text-secondary;
+}
+.burger-nav::after{
+  content: '';
+  display: inline-block;
+  height: 3px;
+  width: 35px;
+  position: absolute;
+  top: 25px;
+  left: 3px;
+
+  background-color: $text-secondary;
+}
+
+// jumbotron
+
+.jumbotron {
+  height: 600px;
+  margin-top: 10px;
+
+  background: fixed left / cover no-repeat url(/images/runner.jpg);
+}
+
+.jumbotron-presentation {
+  text-align: right;
+}
+
+.jumbotron-presentation-title {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: $title-font;
+  font-weight: $weight-bold;
+  color: $text-primary;
+}
+
+.jumbotron-presentation-text {
+ margin: 30px 0;
+
+ font-weight: $weight-bold;
+}
+
+@media only screen and (min-width: 850px) {
+
+  //navbar
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+
+  //nav
+  .nav {
+    display: block;
+    position: relative;
+
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 36.5px 27.5px;
+
+    width: auto;
+    margin: 0;
+  
+    text-align: auto;
+  }
+
+  .nav a:last-child {
+    padding-right: 0;
+  }
+
+  //burger nav
+  .burger-nav {
+    display: none;
+  }
+
+  .jumbotron {
+    height: 870px;
+  }
+
+  .jumbotron-presentation {
+    padding-top: 110px;
+  }
+}
+ 

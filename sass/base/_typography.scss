@@ -4,6 +4,10 @@
 $title-font: 'Exo', sans-serif;
 $text-font: 'Montserrat', sans-serif;
 
+$weight-bold: 800;
+$weight-semi-bold: 600;
+$weight-light: 300;
+
 html {
   font-size: 16px; 
 }
@@ -11,16 +15,17 @@ html {
 body {
   font-family: $text-font;
   line-height: 1.4;
+  color: $text-secondary;
 }
 
 .weight-bold {
-  font-weight: 800;
+  font-weight: $weight-bold;
 }
 
 .weight-semi-bold {
-  font-weight: 600;
+  font-weight: $weight-semi-bold;
 }
 
 .weight-light {
-  font-weight: 300;
+  font-weight: $weight-light;
 }

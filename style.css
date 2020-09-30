@@ -63,11 +63,11 @@ a {
 }
 
 .bg-primary {
-  background-color: #472F88 !important;
+  background-color: #F98723 !important;
 }
 
 .bg-secondary {
-  background-color: #E72287 !important;
+  background-color: #13152F !important;
 }
 
 .bg-success {
@@ -99,11 +99,11 @@ a {
 }
 
 .text-primary {
-  color: #472F88 !important;
+  color: #F98723 !important;
 }
 
 .text-secondary {
-  color: #E72287 !important;
+  color: #13152F !important;
 }
 
 .text-success {
@@ -138,6 +138,31 @@ body {
   background-color: #FEFEF4;
 }
 
+.btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 40px;
+  padding: 12px 14px;
+  font-weight: 800;
+  text-align: center;
+  border: 2px solid #13152F;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  font-weight: 800;
+  background-color: #13152F;
+  color: #F98723;
+  border: 2px solid #13152F;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .btn {
+    width: auto;
+  }
+}
 html {
   font-size: 16px;
 }
@@ -145,6 +170,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.4;
+  color: #13152F;
 }
 
 .weight-bold {
@@ -162,11 +188,17 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 150px 15px;
 }
 
 .container-small {
   max-width: 815px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.container-navbar {
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -179,10 +211,6 @@ body {
 }
 
 .navbar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
   font-family: "Exo", sans-serif;
   text-transform: uppercase;
   background-color: #FEFEF4;
@@ -191,15 +219,120 @@ body {
   box-shadow: 0px 14px 46px 0px rgba(0, 0, 0, 0.05);
 }
 
+.nav {
+  display: none;
+  position: absolute;
+  top: 84px;
+  left: 0;
+  right: 0;
+  background-color: #FEFEF4;
+}
+
 .nav a {
   display: inline-block;
-  padding: 37.5px 27.5px;
+  width: 100%;
+  margin: 15px 0;
+  padding-bottom: 10px;
+  text-align: center;
+  transition: 0.3s;
+  border-bottom: 2px solid #FFF;
 }
 
-.nav a:last-child {
-  padding-right: 0;
+.nav a:hover {
+  color: #F98723;
+  border-bottom: 2px solid #F98723;
 }
 
+.burger-nav {
+  position: relative;
+  cursor: pointer;
+}
+
+.burger-nav::before {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 35px;
+  position: absolute;
+  top: -7px;
+  left: 3px;
+  background-color: #13152F;
+}
+
+.burger-nav::after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 35px;
+  position: absolute;
+  top: 25px;
+  left: 3px;
+  background-color: #13152F;
+}
+
+.jumbotron {
+  height: 600px;
+  margin-top: 10px;
+  background: fixed left/cover no-repeat url(/images/runner.jpg);
+}
+
+.jumbotron-presentation {
+  text-align: right;
+}
+
+.jumbotron-presentation-title {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "Exo", sans-serif;
+  font-weight: 800;
+  color: #F98723;
+}
+
+.jumbotron-presentation-text {
+  margin: 30px 0;
+  font-weight: 800;
+}
+
+@media only screen and (min-width: 850px) {
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+
+  .nav {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 36.5px 27.5px;
+    width: auto;
+    margin: 0;
+    text-align: auto;
+  }
+
+  .nav a:last-child {
+    padding-right: 0;
+  }
+
+  .burger-nav {
+    display: none;
+  }
+
+  .jumbotron {
+    height: 870px;
+  }
+
+  .jumbotron-presentation {
+    padding-top: 110px;
+  }
+}
 .alert {
   margin-bottom: 30px;
   padding: 12px 20px;

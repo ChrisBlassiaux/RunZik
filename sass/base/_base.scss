@@ -1,7 +1,7 @@
 
 // colors
-$bg-primary: #472F88;
-$bg-secondary: #E72287;
+$bg-primary: #F98723;
+$bg-secondary: #13152F;
 $bg-success: #d4edda;
 $bg-danger: #f8d7da;
 $bg-warning: #FAD449;
@@ -10,8 +10,8 @@ $bg-light: #FEFEF4;
 $bg-dark: #1A1A1A;
 $bg-white: #FFF;
 
-$text-primary: #472F88;
-$text-secondary: #E72287;
+$text-primary: #F98723;
+$text-secondary: #13152F;
 $text-success: #4AC047;
 $text-danger: #D03333;
 $text-warning: #FAD449;
@@ -112,6 +112,38 @@ body {
 
 //btn CSS
 
+.btn {
+  display: inline-block;
+  
+  width: 100%;
+  margin-top: 40px;
+  padding: 12px 14px;
+
+  font-weight: 800;
+  text-align: center;
+  
+  border: 2px solid $text-secondary;
+  border-radius: 10px;
+
+  transition: .3s;
+}
+
+.btn:hover {
+  font-weight: 800;
+
+  background-color: $bg-secondary;
+  color: $text-primary ;
+  
+  border: 2px solid $text-secondary;
+  border-radius: 10px;
+}
+
 //hover
+
+@media screen and (min-width: 700px) {
+  .btn {
+    width: auto;
+  }
+}
 
 //responsive
