@@ -13,8 +13,14 @@
   top: 0;
   right: 0;
 
+  font-family: $title-font;
+  text-transform: uppercase;
+
   background-color: $bg-light;
-  background-color: #F00;
+
+  -webkit-box-shadow: 0px 14px 46px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 14px 46px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 14px 46px 0px rgba(0,0,0,0.05);
 } 
 
 .nav a {

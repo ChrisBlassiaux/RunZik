@@ -147,6 +147,18 @@ body {
   line-height: 1.4;
 }
 
+.weight-bold {
+  font-weight: 800;
+}
+
+.weight-semi-bold {
+  font-weight: 600;
+}
+
+.weight-light {
+  font-weight: 300;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -171,8 +183,12 @@ body {
   left: 0;
   top: 0;
   right: 0;
+  font-family: "Exo", sans-serif;
+  text-transform: uppercase;
   background-color: #FEFEF4;
-  background-color: #F00;
+  -webkit-box-shadow: 0px 14px 46px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 14px 46px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 14px 46px 0px rgba(0, 0, 0, 0.05);
 }
 
 .nav a {
