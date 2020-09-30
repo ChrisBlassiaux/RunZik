@@ -87,7 +87,7 @@ a {
 }
 
 .bg-light {
-  background-color: #E1E1E1 !important;
+  background-color: #FEFEF4 !important;
 }
 
 .bg-dark {
@@ -123,7 +123,7 @@ a {
 }
 
 .text-light {
-  color: #E1E1E1 !important;
+  color: #FEFEF4 !important;
 }
 
 .text-dark {
@@ -132,6 +132,10 @@ a {
 
 .text-white {
   color: #FFF !important;
+}
+
+body {
+  background-color: #FEFEF4;
 }
 
 html {
@@ -146,13 +150,38 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 30px;
+  padding: 0 15px;
 }
 
 .container-small {
-  max-width: 760px;
+  max-width: 815px;
   margin: 0 auto;
-  padding: 40px 30px;
+  padding: 0 15px;
+}
+
+.container-navbar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #FEFEF4;
+  background-color: #F00;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 37.5px 27.5px;
+}
+
+.nav a:last-child {
+  padding-right: 0;
 }
 
 .alert {

@@ -6,7 +6,7 @@ $bg-success: #d4edda;
 $bg-danger: #f8d7da;
 $bg-warning: #FAD449;
 $bg-info: #0075FF;
-$bg-light: #E1E1E1;
+$bg-light: #FEFEF4;
 $bg-dark: #1A1A1A;
 $bg-white: #FFF;
 
@@ -16,7 +16,7 @@ $text-success: #4AC047;
 $text-danger: #D03333;
 $text-warning: #FAD449;
 $text-info: #0075FF;
-$text-light: #E1E1E1;
+$text-light: #FEFEF4;
 $text-dark: #1A1A1A;
 $text-white: #FFF;
 
@@ -101,6 +101,10 @@ a {
 
 .text-white {
   color: $text-white !important;
+}
+
+body {
+  background-color: $bg-light;
 }
 
 //fonts

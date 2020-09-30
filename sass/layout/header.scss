@@ -1,0 +1,27 @@
+
+
+.container-navbar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  background-color: $bg-light;
+  background-color: #F00;
+} 
+
+.nav a {
+  display: inline-block;
+  padding: 37.5px 27.5px;
+}
+
+.nav a:last-child {
+  padding-right: 0;
+}
