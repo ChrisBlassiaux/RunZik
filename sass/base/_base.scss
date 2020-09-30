@@ -1,0 +1,112 @@
+
+// colors
+$bg-primary: #472F88;
+$bg-secondary: #E72287;
+$bg-success: #d4edda;
+$bg-danger: #f8d7da;
+$bg-warning: #FAD449;
+$bg-info: #0075FF;
+$bg-light: #E1E1E1;
+$bg-dark: #1A1A1A;
+$bg-white: #FFF;
+
+$text-primary: #472F88;
+$text-secondary: #E72287;
+$text-success: #4AC047;
+$text-danger: #D03333;
+$text-warning: #FAD449;
+$text-info: #0075FF;
+$text-light: #E1E1E1;
+$text-dark: #1A1A1A;
+$text-white: #FFF;
+
+
+//base CSS
+a {
+  color: inherit;
+  text-decoration: none;
+
+  transition: color .3s;
+}
+
+//background CSS
+.bg-primary {
+  background-color: $bg-primary !important;
+}
+
+.bg-secondary {
+  background-color: $bg-secondary !important;
+}
+
+.bg-success {
+  background-color: $bg-success !important;
+}
+
+.bg-danger {
+  background-color: $bg-danger !important;
+}
+
+.bg-warning {
+  background-color: $bg-warning !important;
+}
+
+.bg-info {
+  background-color: $bg-info !important;
+}
+
+.bg-light {
+  background-color: $bg-light !important;
+}
+
+.bg-dark {
+  background-color: $bg-dark !important;
+}
+
+.bg-white {
+  background-color: $bg-white !important;
+}
+
+//color-text CSS
+.text-primary {
+  color: $text-primary !important;
+}
+
+.text-secondary {
+  color: $text-secondary !important;
+}
+
+.text-success {
+  color: $text-success !important;
+}
+
+.text-danger {
+  color: $text-danger !important;
+}
+
+.text-warning {
+  color: $text-warning !important;
+}
+
+.text-info {
+  color: $text-info !important;
+}
+
+.text-light {
+  color: $text-light !important;
+}
+
+.text-dark {
+  color: $text-dark !important;
+}
+
+.text-white {
+  color: $text-white !important;
+}
+
+//fonts
+
+//btn CSS
+
+//hover
+
+//responsive
