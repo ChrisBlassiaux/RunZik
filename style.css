@@ -163,13 +163,6 @@ body {
     width: auto;
   }
 }
-.title {
-  font-size: 1.5em;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 html {
   font-size: 16px;
 }
@@ -419,53 +412,12 @@ body {
   border: 1px solid #c3e6cb;
 }
 
-.range-bloc:hover .range-bloc-text::after {
-  background-color: #F98723;
+form {
+  margin: 50px 0;
 }
 
-.range-bloc:hover .range-bloc-img {
-  opacity: 1;
-}
-
-.range-bloc-img {
-  height: 400px;
-  width: 100%;
-  background: center/cover no-repeat url(images/montre_connecte_red.jpg);
-  border-radius: 10px;
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
-.range-bloc-img-2 {
-  background: center/cover no-repeat url(images/running_woman_red.jpeg);
-}
-
-.range-bloc-img-3 {
-  background: center/cover no-repeat url(images/brassard.jpg);
-}
-
-.range-bloc-text {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.range-bloc-text::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 85px;
-  margin: 20px auto 50px auto;
-  background-color: #13152F;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-@media only screen and (min-width: 800px) {
-  .range {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 25px;
-  }
+.input-group {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
