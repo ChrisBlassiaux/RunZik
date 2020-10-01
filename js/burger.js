@@ -33,3 +33,9 @@ products.addEventListener('click', function () {
     }
   }
 })
+
+window.addEventListener('resize', function () {
+  if (window.innerWidth >= 850) {
+    nav.style.display = 'block';
+  }
+})
