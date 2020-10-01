@@ -1,0 +1,48 @@
+.value {
+  margin: 50px 0;
+
+  text-align: center;
+
+  background-color: #FDECD5;
+}
+
+.value-blue {
+  background-color: #DBDBD6;
+}
+
+.value img {
+  margin: 0 auto;
+}
+
+.value-text {
+  margin-top: 50px;
+
+  text-align: left;
+}
+
+@media only screen and (min-width: 850px) {
+  .container-value {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container-value-blue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .value-text {
+    margin: 0 20px;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .value img {
+    width: 2000px;
+  }
+}
