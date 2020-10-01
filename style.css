@@ -759,4 +759,20 @@ form {
   text-align: center;
 }
 
+.container-events {
+  margin: 50px 0;
+  position: relative;
+}
+
+.container-events::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  background: left/cover no-repeat url("images/bolt.jpg");
+}
+
 /*# sourceMappingURL=style.css.map */
