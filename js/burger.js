@@ -38,4 +38,8 @@ window.addEventListener('resize', function () {
   if (window.innerWidth >= 850) {
     nav.style.display = 'block';
   }
+
+  if (window.innerWidth <= 850) {
+    nav.style.display = 'none';
+  }
 })
