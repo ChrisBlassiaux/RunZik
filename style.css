@@ -535,6 +535,10 @@ body {
   background-color: #DBDBD6;
 }
 
+.value-orange {
+  background-color: #FDECD5;
+}
+
 .value img {
   margin: 0 auto;
 }
