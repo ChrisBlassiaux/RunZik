@@ -148,6 +148,7 @@ body {
   border: 2px solid #13152F;
   border-radius: 10px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -406,6 +407,21 @@ body {
     display: block;
   }
 }
+.footer {
+  margin-top: 100px;
+}
+
+.footer-first-bar {
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(19, 21, 47, 0.9) 0%, rgba(19, 21, 47, 0.9) 0%), fixed left/cover no-repeat url(images/montre_connecte_red.jpg);
+  opacity: 0.85;
+}
+
+.bar-text {
+  padding: 30px 0;
+}
+
 .alert {
   margin-bottom: 30px;
   padding: 12px 20px;
@@ -540,6 +556,12 @@ body {
 
 .newsletter .btn {
   margin-top: 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .newsletter-text {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

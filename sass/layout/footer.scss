@@ -1,0 +1,17 @@
+.footer {
+  margin-top: 100px;
+}
+
+.footer-first-bar {
+  text-align: center;
+  color: #fff;
+  
+  background: linear-gradient(90deg,  rgba(19, 21, 47, .9) 0%,  rgba(19, 21, 47, .9) 0%),
+        fixed left / cover no-repeat url(images/montre_connecte_red.jpg);
+
+  opacity: .85;
+}
+
+.bar-text {
+  padding: 30px 0;
+}
