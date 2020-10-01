@@ -310,7 +310,7 @@ body {
 
 .jumbotron {
   height: 600px;
-  background: fixed left/cover no-repeat url(/images/runner.jpg);
+  background: fixed left/cover no-repeat url("images/runner.jpg");
 }
 
 .jumbotron-presentation {
@@ -420,7 +420,7 @@ body {
 
 .jumbotron-small::after {
   content: "";
-  background: fixed bottom/cover no-repeat url(/images/brassard.jpg);
+  background: fixed bottom/cover no-repeat url("images/brassard.jpg");
   opacity: 0.5;
   top: 0;
   left: 0;
@@ -720,6 +720,42 @@ body {
 .img_product {
   width: 33%;
   margin-left: 8%;
+}
+
+form {
+  margin: 50px 0;
+}
+
+.input-group {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.input-group-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.full-size {
+  width: 100%;
+}
+
+.half-size {
+  width: 50%;
+}
+
+.checkbox {
+  margin-top: 20px;
+}
+
+.assistance > .container > p {
+  margin-top: 20px;
+}
+
+.value-orange > .container > p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
