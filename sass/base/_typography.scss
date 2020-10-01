@@ -29,3 +29,24 @@ body {
 .weight-light {
   font-weight: $weight-light;
 }
+
+
+//title
+
+.title {
+  margin: 50px 0;
+
+  font-size: 1.5em;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title-medium {
+  margin: 15px 0;
+
+  font-size: 1.125em;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+}
+

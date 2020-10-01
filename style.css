@@ -185,10 +185,25 @@ body {
   font-weight: 300;
 }
 
+.title {
+  margin: 50px 0;
+  font-size: 1.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title-medium {
+  margin: 15px 0;
+  font-size: 1.125em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 150px 15px;
+  padding: 40px 50px;
 }
 
 .container-small {
@@ -203,6 +218,11 @@ body {
   padding: 0 15px;
 }
 
+@media only screen and (min-width: 1100px) {
+  .container {
+    padding: 150px 15px;
+  }
+}
 .container-navbar {
   height: 100%;
   display: flex;
@@ -217,6 +237,7 @@ body {
   -webkit-box-shadow: 0px 14px 46px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 14px 46px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 14px 46px 0px rgba(0, 0, 0, 0.05);
+  z-index: 1;
 }
 
 .nav {
@@ -325,6 +346,10 @@ body {
   opacity: 0.7;
 }
 
+.nav a:last-child {
+  margin-bottom: 0;
+}
+
 @media only screen and (min-width: 850px) {
   .navbar {
     position: fixed;
@@ -418,6 +443,124 @@ body {
 .fnac {
   color: #F98723;
   font-weight: bolder;
+}
+
+.range-bloc:hover .range-bloc-text::after {
+  background-color: #F98723;
+}
+
+.range-bloc:hover .range-bloc-img {
+  opacity: 1;
+}
+
+.range-bloc-img {
+  height: 400px;
+  width: 100%;
+  background: center/cover no-repeat url(images/montre_connecte_red.jpg);
+  border-radius: 10px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.range-bloc-img-2 {
+  background: center/cover no-repeat url(images/running_woman_red.jpeg);
+}
+
+.range-bloc-img-3 {
+  background: center/cover no-repeat url(images/brassard.jpg);
+}
+
+.range-bloc-text {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.range-bloc-text::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 85px;
+  margin: 20px auto 50px auto;
+  background-color: #13152F;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media only screen and (min-width: 800px) {
+  .range {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+  }
+}
+.value {
+  margin: 50px 0;
+  text-align: center;
+  background-color: #FDECD5;
+}
+
+.value-blue {
+  background-color: #DBDBD6;
+}
+
+.value img {
+  margin: 0 auto;
+}
+
+.value-text {
+  margin-top: 50px;
+  text-align: left;
+}
+
+@media only screen and (min-width: 850px) {
+  .container-value {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container-value-blue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .value-text {
+    margin: 0 20px;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .value img {
+    width: 2000px;
+  }
+}
+.newsletter {
+  text-align: center;
+}
+
+.newsletter .title {
+  margin-bottom: 15px;
+}
+
+.newsletter-text {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.newsletter input {
+  margin: 15px auto;
+  padding: 10px;
+  display: block;
+  border: 2px solid #13152F;
+  border-radius: 5px;
+}
+
+.newsletter .btn {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

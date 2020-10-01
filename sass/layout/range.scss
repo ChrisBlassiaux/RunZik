@@ -1,0 +1,57 @@
+
+
+
+.range-bloc:hover .range-bloc-text::after {
+  background-color: $bg-primary;
+} 
+
+.range-bloc:hover .range-bloc-img {
+  opacity: 1;
+} 
+
+.range-bloc-img {
+  height: 400px;
+  width: 100%;
+
+  background: center / cover no-repeat url(images/montre_connecte_red.jpg);
+
+  border-radius: 10px;
+  opacity: .7;
+  transition: .3s;
+}
+
+.range-bloc-img-2 {
+  background: center / cover no-repeat url(images/running_woman_red.jpeg);
+}
+
+.range-bloc-img-3 {
+  background: center / cover no-repeat url(images/brassard.jpg);
+}
+
+.range-bloc-text {
+  margin: 20px 0;
+
+  text-align: center;
+}
+
+.range-bloc-text::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 85px;
+  margin: 20px auto 50px auto;
+
+  background-color: $bg-secondary;
+
+  border-radius: 2px;
+
+  transition: .3s;
+}
+
+@media only screen and (min-width: 800px) {
+  .range {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:  25px;
+  }
+}
