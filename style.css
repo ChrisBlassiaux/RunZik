@@ -407,6 +407,34 @@ body {
     display: block;
   }
 }
+.jumbotron-small {
+  height: 315px;
+  position: relative;
+}
+
+.jumbotron-small::after {
+  content: "";
+  background: fixed bottom/cover no-repeat url(/images/brassard.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.jumbotron-small-presentation-title {
+  color: #F98723;
+  font-size: 2em;
+  font-family: "Exo", sans-serif;
+  font-weight: 800;
+}
+
+.jumbotron-small-presentation-text {
+  font-weight: 600;
+}
+
 .footer {
   margin-top: 100px;
   text-align: center;
@@ -603,6 +631,9 @@ body {
   .newsletter-text {
     width: 100%;
   }
+}
+.container-mentions h2 {
+  margin: 20px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

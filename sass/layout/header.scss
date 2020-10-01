@@ -215,3 +215,37 @@
   }
 }
  
+
+// jumbotron-small
+
+.jumbotron-small {
+  height: 315px;
+  position: relative;
+}
+
+.jumbotron-small::after {
+  content: "";
+  background: fixed bottom / cover no-repeat url(/images/brassard.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.jumbotron-small-presentation {
+
+}
+
+.jumbotron-small-presentation-title {
+  color: $text-primary;
+  font-size: 2em;
+  font-family: $title-font;
+  font-weight: $weight-bold;
+}
+
+.jumbotron-small-presentation-text {
+  font-weight: $weight-semi-bold;
+}
