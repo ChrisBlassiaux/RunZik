@@ -91,6 +91,7 @@
 
 .nav-products img {
   width: 100px;
+  height: 60px;
 }
 
 .nav-product-bloc-text {
@@ -207,11 +208,47 @@
 
   .nav-products img {
     width: 170px;
+    height: 100px;
   }
 
   .nav-product-bloc-text {
     margin: 0 15px;
     display: block;
   }
+
+  // jumbotron-small
+  .jumbotron-small-presentation {
+    padding-top: 80px;
+  }
 }
  
+
+// jumbotron-small
+
+.jumbotron-small {
+  height: 315px;
+  position: relative;
+}
+
+.jumbotron-small::after {
+  content: "";
+  background: fixed bottom / cover no-repeat url(/images/brassard.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.jumbotron-small-presentation-title {
+  color: $text-primary;
+  font-size: 2em;
+  font-family: $title-font;
+  font-weight: $weight-bold;
+}
+
+.jumbotron-small-presentation-text {
+  font-weight: $weight-semi-bold;
+}
