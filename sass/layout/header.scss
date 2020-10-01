@@ -45,7 +45,8 @@
   border-bottom: 2px solid #FFF;
 }
 
-.nav a:hover {
+.nav a:hover,
+.active {
   color: $text-primary;
   border-bottom: 2px solid $text-primary;
 }

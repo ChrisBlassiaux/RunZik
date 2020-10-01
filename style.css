@@ -260,7 +260,8 @@ body {
   border-bottom: 2px solid #FFF;
 }
 
-.nav a:hover {
+.nav a:hover,
+.active {
   color: #F98723;
   border-bottom: 2px solid #F98723;
 }
