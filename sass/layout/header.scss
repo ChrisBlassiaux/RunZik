@@ -213,6 +213,11 @@
     margin: 0 15px;
     display: block;
   }
+
+  // jumbotron-small
+  .jumbotron-small-presentation {
+    padding-top: 80px;
+  }
 }
  
 
@@ -233,10 +238,6 @@
   right: 0;
   position: absolute;
   z-index: -1;   
-}
-
-.jumbotron-small-presentation {
-
 }
 
 .jumbotron-small-presentation-title {

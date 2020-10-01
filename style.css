@@ -406,6 +406,10 @@ body {
     margin: 0 15px;
     display: block;
   }
+
+  .jumbotron-small-presentation {
+    padding-top: 80px;
+  }
 }
 .jumbotron-small {
   height: 315px;
