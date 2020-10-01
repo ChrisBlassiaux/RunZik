@@ -542,4 +542,12 @@ body {
   margin-top: 0;
 }
 
+form {
+  margin: 50px 0;
+}
+
+.input-group {
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
