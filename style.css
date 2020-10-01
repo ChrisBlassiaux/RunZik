@@ -148,6 +148,7 @@ body {
   border: 2px solid #13152F;
   border-radius: 10px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -299,6 +300,7 @@ body {
 
 .nav-products img {
   width: 100px;
+  height: 60px;
 }
 
 .nav-product-bloc-text {
@@ -399,11 +401,96 @@ body {
 
   .nav-products img {
     width: 170px;
+    height: 100px;
   }
 
   .nav-product-bloc-text {
     margin: 0 15px;
     display: block;
+  }
+
+  .jumbotron-small-presentation {
+    padding-top: 80px;
+  }
+}
+.jumbotron-small {
+  height: 315px;
+  position: relative;
+}
+
+.jumbotron-small::after {
+  content: "";
+  background: fixed bottom/cover no-repeat url(/images/brassard.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.jumbotron-small-presentation-title {
+  color: #F98723;
+  font-size: 2em;
+  font-family: "Exo", sans-serif;
+  font-weight: 800;
+}
+
+.jumbotron-small-presentation-text {
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.footer-first-bar {
+  color: #fff;
+  background: linear-gradient(90deg, rgba(19, 21, 47, 0.9) 0%, rgba(19, 21, 47, 0.9) 0%), fixed left/cover no-repeat url(images/montre_connecte_red.jpg);
+  opacity: 0.85;
+}
+
+.bar-text {
+  padding: 30px 0;
+}
+
+.footer-second-bar {
+  background-color: #EAEAEA;
+}
+
+.footer-second-bar div {
+  padding: 20px;
+  font-weight: 600;
+}
+
+.footer-last-bar {
+  padding: 10px 0;
+  color: #FFF;
+  background-color: rgba(19, 21, 47, 0.8);
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #13152F;
+}
+
+.socials a:hover {
+  color: #F98723;
+}
+
+@media only screen and (min-width: 700px) {
+  .container-footer-first-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+  }
+
+  .container-second-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
   }
 }
 .alert {
@@ -424,6 +511,35 @@ body {
   border: 1px solid #c3e6cb;
 }
 
+.revendeur {
+  text-align: center;
+}
+
+.revendeur img {
+  width: 100%;
+}
+
+.revendeurP {
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+.fnac {
+  color: #F98723;
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 600px) {
+  .revendeur img {
+    width: 500px;
+  }
+
+  .revendeur p {
+    margin: 50px auto;
+    width: 600px;
+  }
+}
 .range-bloc:hover .range-bloc-text::after {
   background-color: #F98723;
 }
@@ -482,6 +598,10 @@ body {
   background-color: #DBDBD6;
 }
 
+.value-orange {
+  background-color: #FDECD5;
+}
+
 .value img {
   margin: 0 auto;
 }
@@ -506,7 +626,7 @@ body {
   }
 
   .value-text {
-    margin: 0 20px;
+    margin: 0 50px;
   }
 
   .text-right {
@@ -540,6 +660,15 @@ body {
 
 .newsletter .btn {
   margin-top: 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .newsletter-text {
+    width: 100%;
+  }
+}
+.container-mentions h2 {
+  margin: 20px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

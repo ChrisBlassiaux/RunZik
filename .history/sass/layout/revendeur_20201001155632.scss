@@ -1,0 +1,33 @@
+.revendeur {
+    text-align: center;
+}
+
+.revendeur img {
+    width: 100%;
+}
+
+.revendeurP {
+     text-align: center;
+     font-size: 1em;
+     margin-bottom: 1.5em;
+}
+
+// .revendeur {
+//     margin: 4em;
+  
+//     padding: 1.5em 15em;
+// }
+.fnac {
+    color: #F98723;
+    font-weight: bolder;
+}
+
+@media only screen and (min-width: 600px) {
+    .revendeur img {
+        width: 500px;
+    }
+
+    .revendeurP {
+        width: 500px;
+   }
+}
