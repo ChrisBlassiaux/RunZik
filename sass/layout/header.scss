@@ -51,6 +51,15 @@
   border-bottom: 2px solid $text-primary;
 }
 
+span#cart-icon {
+  transition: .3s;
+  cursor: pointer;
+}
+
+span#cart-icon:hover {
+  color: $text-primary;
+}
+
 // burger-nav
 
 .burger-nav {
@@ -159,7 +168,7 @@
 
 
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 995px) {
 
   //navbar
   .navbar {

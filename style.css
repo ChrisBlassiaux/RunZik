@@ -266,6 +266,15 @@ body {
   border-bottom: 2px solid #F98723;
 }
 
+span#cart-icon {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+span#cart-icon:hover {
+  color: #F98723;
+}
+
 .burger-nav {
   position: relative;
   cursor: pointer;
@@ -359,7 +368,7 @@ body {
   color: #F98723;
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 995px) {
   .navbar {
     position: fixed;
     left: 0;

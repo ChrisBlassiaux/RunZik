@@ -80,8 +80,6 @@ let createAndDisplayProductInCart = function (product, quantity) {
   cartDisplay.appendChild(hr);
 }
 
-// createAndDisplayProductInCart(watch, 7);
-
 let calculateTotalPriceAndDisplayInCart = function (nbOfProductByProduct) {
 
   let totalPrice = 0;
@@ -108,12 +106,20 @@ let calculateTotalPriceAndDisplayInCart = function (nbOfProductByProduct) {
   cartDisplay.appendChild(totalPriceHtml);
 }
 
-// calculateTotalPriceAndDisplayInCart(cartCount);
+calculateTotalPriceAndDisplayInCart(cartCount);
 
-cartIcon.addEventListener('click', function () {
 
-  createAndDisplayProductInCart(product, quantity);
-  calculateTotalPriceAndDisplayInCart(nbOfProductByProduct);
+cartIcon.addEventListener('click', (event) => {
+
+  // event.preventDefault();
+  //si le produit.value est supérieur à => le créer ! 
+  if (cartCount.watches > 0) {
+    createAndDisplayProductInCart(watch, cartCount.watches);
+  } else if (cartCount.headphones > 0) {
+    createAndDisplayProductInCart(headphone, cartCount.headphones);
+  } else if (cartCount.armbands > 0) {
+    createAndDisplayProductInCart(armband, cartCount.armbands);
+  } 
 
   if (cartDisplay.style.display == 'none') {
     cartDisplay.style.display = 'block';
@@ -121,3 +127,9 @@ cartIcon.addEventListener('click', function () {
     cartDisplay.style.display = 'none';
   }
 });
+
+
+
+//A faire : 
+// Les elements ne doivent pas se dupliquer 
+// le panier doit rester sur les autres pages 
