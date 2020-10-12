@@ -419,6 +419,17 @@ body {
   .jumbotron-small-presentation {
     padding-top: 80px;
   }
+
+  .cart-display {
+    display: none;
+    position: fixed;
+    right: 0;
+    width: 500px;
+    padding: 20px;
+    background-color: #FFF;
+    border: 2px solid #F98723;
+    border-radius: 5px;
+  }
 }
 .jumbotron-small {
   height: 315px;

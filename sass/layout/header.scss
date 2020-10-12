@@ -157,6 +157,8 @@
   color: $text-primary;
 }
 
+
+
 @media only screen and (min-width: 850px) {
 
   //navbar
@@ -226,6 +228,19 @@
   // jumbotron-small
   .jumbotron-small-presentation {
     padding-top: 80px;
+  }
+
+  .cart-display {
+    display: none;
+    position: fixed;
+    right: 0;
+    width: 500px;
+
+    padding: 20px;
+
+    background-color: #FFF;
+    border: 2px solid $bg-primary;
+    border-radius: 5px;
   }
 }
 

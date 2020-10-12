@@ -1,4 +1,31 @@
 let formsBuy = document.querySelectorAll('form[data-buy]');
+// let filterNav = document.querySelector('.filter-nav');
+
+//créer un objet par article
+//class par défaut et chaque produit est une instance
+
+/* <div id="cart-title-product">Montre Run'Zik S plus</div> 
+<div>Qté: <span id="cart-nb-products">7</span></div>
+<div>Prix total : <span id="cart-price-total"> 200euros</span></div> 
+<hr></hr> */
+
+//créer un gabarit des objets
+//créer les objets 
+// créer l'element dans le cart (product, quantity) => multiplier le product.price par quantity
+
+let createProductInCart = function (title, quantity, totalPrice) {
+
+}
+
+class Products {
+
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+}
+
 
 let cart = {
   watches: 0,
@@ -29,7 +56,6 @@ formsBuy.forEach(form => {
     }
   
     let countCart = function (cart) {
-      console.log(cart)
       let nb = 0;
       let valueCart = Object.values(cart);
       for (let i = 0; i < valueCart.length; i++) {
