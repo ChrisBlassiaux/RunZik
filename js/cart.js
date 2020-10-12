@@ -1,41 +1,48 @@
-let btnBuy = document.querySelectorAll('span[data-buy]');
+let formsBuy = document.querySelectorAll('form[data-buy]');
 
 let cart = {
-  watches: 0, 
-  headphones: 0, 
+  watches: 0,
+  headphones: 0,
   armbands: 0
 };
 
-let nbProductCart = document.getElementById('nb-products-cart');
+let nbProductCartHtml = document.getElementById('nb-products-cart');
 
-btnBuy.forEach(btn => {
-  btn.addEventListener('click', productBuy);
-});
+formsBuy.forEach(form => {
+  form.addEventListener('submit', (event) => {
+    datasetForm = form.dataset.buy;
 
-function productBuy() {
-
-  switch (this.dataset.buy) {
-    case 'watch':
-      cart.watches = cart.watches + 1;
-      break;
-    case 'headphone':
-      cart.headphomes = cart.headphomes + 1;
-      break;
-    case 'armband':
-      cart.armbands = cart.armbands + 1;
-      break;
-  }
-
-  let countCart = function (cart) {
-    let nb = 0;
-    let valueCart = Object.values(cart);
-    for (let i = 0; i < valueCart.length; i++) {
-      nb += valueCart[i];
+    nbOfProducts = Number(form.elements[0].value);
+ 
+    event.preventDefault();
+    
+    switch (datasetForm) {
+      case 'watch': 
+        cart.watches += nbOfProducts === 0 ? 1 : nbOfProducts;
+        break;
+      case 'headphone':
+        cart.headphomes += nbOfProducts === 0 ? 1 : nbOfProducts;
+        break;
+      case 'armband':
+        cart.armbands += nbOfProducts === 0 ? 1 : nbOfProducts;
+        break;
     }
-    return nb;
-  }
+  
+    let countCart = function (cart) {
+      console.log(cart)
+      let nb = 0;
+      let valueCart = Object.values(cart);
+      for (let i = 0; i < valueCart.length; i++) {
+        nb += valueCart[i];
+      }
+      return nb;
+    }
 
-  if (countCart(cart) > 0) {
-    nbProductCart.textContent = countCart(cart);
-  }
-};
+    // console.log(countCart(cart))
+  
+    if (countCart(cart) > 0) {
+      nbProductCartHtml.textContent = countCart(cart);
+    }
+
+  });
+});
