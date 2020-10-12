@@ -353,6 +353,12 @@ body {
   margin-bottom: 0;
 }
 
+#nb-products-cart {
+  margin: 10px;
+  font-weight: bold;
+  color: #F98723;
+}
+
 @media only screen and (min-width: 850px) {
   .navbar {
     position: fixed;

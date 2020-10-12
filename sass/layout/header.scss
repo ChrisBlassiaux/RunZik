@@ -151,6 +151,12 @@
   margin-bottom: 0;
 }
 
+#nb-products-cart {
+  margin: 10px;
+  font-weight: bold;
+  color: $text-primary;
+}
+
 @media only screen and (min-width: 850px) {
 
   //navbar

@@ -47,7 +47,7 @@
             <a href="about.html" class="weight-bold">Qui sommes-nous ?</a>
             <a href="revendeur.html">Revendeurs</a>
             <a href="assistance.html" class="weight-light">Assistance</a>
-            <a href="#" class="weight-light"><i class="fa fa-cart-plus fa-2x"></i></a>
+            <a href="#" class="weight-light"><span class="fa fa-cart-plus fa-2x"></span><span id="nb-products-cart"></span></a>
           </div>
         </div>
       </div>
@@ -73,7 +73,9 @@
 				<h1 class="title-medium">Montre Run’Zik S Plus</h1>
 				<p>Style et performance </p>
 				<p class="price">250€</p>
-        <a href="revendeur.html" class="btn">Acheter</a>
+        <span class="btn" data-buy="watch">Acheter</span>
+        <label for="tentacles">Quantité :</label>
+        <input type="number" id="tentacles" name="tentacles" min="1" max="100">
 				<hr class="line">
 				<h2 class="title-small">EFFECTUEZ VOS ACHATS EN TOUTE CONFIANCE</h2>
 				<p>Une garantie de 2 ans pièces et main d’oeuvre.
@@ -231,5 +233,6 @@ La livraison rapide entre 24h et 48h vous permet de profiter au plus vite de nos
       </div>
     </footer>
  <script src="js/burger.js"></script>
+ <script src="js/cart.js"></script>
 </body>
 </html>
