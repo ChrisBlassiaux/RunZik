@@ -723,6 +723,47 @@ body {
   margin-left: 8%;
 }
 
+.dropdown {
+  display: inline-block;
+  width: 10%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #FDECD5;
+  width: 500px;
+}
+
+.center {
+  text-align: center;
+}
+
+.delItem {
+  font-size: 1.5em;
+  cursor: pointer;
+  position: relative;
+  right: 10px;
+  bottom: 0px;
+}
+
+.item-panier {
+  width: 90%;
+  margin: 3% 5%;
+  display: flex;
+}
+
+.miniature {
+  width: 20%;
+  height: 20%;
+}
+
+.texte-panier {
+  width: 80%;
+  margin-left: 20px;
+}
+
 form {
   margin: 50px 0;
 }

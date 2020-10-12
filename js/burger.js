@@ -20,7 +20,8 @@ burger.addEventListener('click', function () {
   }
 });
 
-products.addEventListener('click', function () {
+products.addEventListener('click', function (e) {
+  e.preventDefault();
   if (navProducts.style.display == 'none') {
     navProducts.style.display = 'flex';
     if (window.innerWidth > 850) {
