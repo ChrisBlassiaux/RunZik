@@ -47,7 +47,11 @@
             <a href="about.html" class="weight-bold">Qui sommes-nous ?</a>
             <a href="revendeur.html">Revendeurs</a>
             <a href="assistance.html" class="weight-light">Assistance</a>
-            <a href="#" class="weight-light"><i class="fa fa-cart-plus fa-2x"></i></a>
+            <span class="weight-light" id="cart-icon"><span class="fa fa-cart-plus fa-2x"></span><span id="nb-products-cart"></span></span>
+            <div class="cart-display">
+              <span class="weight-bold">Votre panier</span> 
+              <hr>
+            </div>
           </div>
         </div>
       </div>
@@ -75,7 +79,11 @@
           <h1 class="title-medium">Brassard</h1>
           <p>Style et performance </p>
           <p class="price">199€</p>
-          <a href="revendeur.html" class="btn" data-buy="armband">Acheter</a>
+          <form class="form" data-buy="armband">     
+            <label for="tentacles">Quantité :</label>
+            <input type="number" id="tentacles" name="tentacles" min="1" max="100">
+            <button type="submit" class="btn">Acheter</button>
+          </form>
           <hr class="line">
           <h2 class="title-small">EFFECTUEZ VOS ACHATS EN TOUTE CONFIANCE</h2>
           <p>Une garantie de 2 ans pièces et main d’oeuvre.

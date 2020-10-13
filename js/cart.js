@@ -80,11 +80,12 @@ let nbProductCartHtml = document.getElementById('nb-products-cart');
 
 formsBuy.forEach(form => {
   form.addEventListener('submit', (event) => {
+
+    event.preventDefault();
+
     datasetForm = form.dataset.buy;
 
-    nbOfProducts = Number(form.elements[0].value);
- 
-    event.preventDefault();
+    nbOfProducts = Number(form.elements[0].value); 
     
     switch (datasetForm) {
       case 'watch':
@@ -111,7 +112,6 @@ formsBuy.forEach(form => {
       nbProductCartHtml.textContent = countCart(cartCount);
     }
 
-
     if (cartCount.watches > 0) {
         let elementWatch = document.getElementById('watch-in-cart');
         if (elementWatch) {
@@ -120,7 +120,6 @@ formsBuy.forEach(form => {
         } else {
           createAndDisplayProductInCart(watch, cartCount.watches, 'watch-in-cart');
         }
-        //dire que si la div avec l'id est là, on l'enlève et on affiche le nouveau
     } else if (cartCount.headphones > 0) {
         let elementHeadphone = document.getElementById('watch-in-cart');
         if (elementHeadphone) {
@@ -147,7 +146,9 @@ formsBuy.forEach(form => {
       calculateTotalPriceAndDisplayInCart(cartCount);
     }
 
-    //total price ne fonctionne pas
+    // localStorage.setItem('salut', 'value');
+
+    
   });
 });
 
@@ -163,5 +164,25 @@ cartIcon.addEventListener('click', (event) => {
 });
 
 
+
+
 //A faire : 
 // le panier doit rester sur les autres pages 
+//
+
+// POur stocker des elements => localstorage (stocker des données côté user) 
+
+// localstorage.setItem('key', 'value');
+// let a = localstorage.getItem('key', 'value');
+// VOIR MDN
+
+// Modal qui souvre quand on click sur le panier : produit quantité prix total 
+
+// Navigateur > appliction > localstorage 
+
+
+//
+//mettre toutes les form acheter
+// vérifier que tout fonctionne
+//faire le responsive de tout ça
+// refonte page produit
