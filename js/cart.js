@@ -16,13 +16,65 @@ class Products {
 
 let watch = new Products('Montre Run\'Zik S Plus', '250');
 let headphone = new Products('Casque', '199');
-let brassard = new Products('Brassard', '19');
+let armband = new Products('Brassard', '19');
 
 let cartCount = {
   watches: 0,
   headphones: 0,
   armbands: 0
 };
+
+
+
+let createAndDisplayProductInCart = function (product, quantity, id) {
+
+  let title = document.createElement('div');
+  title.innerHTML = `<div id="cart-title-product">${ product.name }</div> `;
+
+  let quantityHtml = document.createElement('div');
+  quantityHtml.innerHTML = `Qté: <span id="cart-nb-products">${ quantity }</span>`
+
+  let price = document.createElement('div');
+  price.innerHTML = `Prix : <span id="cart-price"> ${ product.price  } € </span>`;
+
+  let hr = document.createElement('hr');
+
+  let container = document.createElement('div');
+  container.id = id; //id à partir du produit
+  container.appendChild(title);
+  container.appendChild(quantityHtml);
+  container.appendChild(price);
+  container.appendChild(hr);
+
+  let parentRef = document.getElementById('total-price');
+  cartDisplay.insertBefore(container, parentRef);
+}
+
+let calculateTotalPriceAndDisplayInCart = function (nbOfProductByProduct) {
+
+  let totalPrice = 0;
+
+  for (const property in nbOfProductByProduct) {
+
+    switch (property) {
+      case 'watches': 
+        totalPrice +=  watch.price * nbOfProductByProduct[property];
+        break;
+      case 'headphones':
+        totalPrice +=  headphone.price * nbOfProductByProduct[property];
+        break;
+      case 'armbands':
+        totalPrice +=  armband.price * nbOfProductByProduct[property];
+        break;
+    }
+  }
+
+  let totalPriceHtml = document.createElement('div');
+  totalPriceHtml.id = 'total-price';
+  totalPriceHtml.innerHTML = `Prix total : <span id="cart-price-total"> ${ totalPrice } € </span>`;
+
+  cartDisplay.appendChild(totalPriceHtml);
+}
 
 let nbProductCartHtml = document.getElementById('nb-products-cart');
 
@@ -58,78 +110,58 @@ formsBuy.forEach(form => {
     if (countCart(cartCount) > 0) {
       nbProductCartHtml.textContent = countCart(cartCount);
     }
+
+
+    if (cartCount.watches > 0) {
+        let elementWatch = document.getElementById('watch-in-cart');
+        if (elementWatch) {
+          elementWatch.remove();
+          createAndDisplayProductInCart(watch, cartCount.watches, 'watch-in-cart');
+        } else {
+          createAndDisplayProductInCart(watch, cartCount.watches, 'watch-in-cart');
+        }
+        //dire que si la div avec l'id est là, on l'enlève et on affiche le nouveau
+    } else if (cartCount.headphones > 0) {
+        let elementHeadphone = document.getElementById('watch-in-cart');
+        if (elementHeadphone) {
+          elementHeadphone.remove();
+          createAndDisplayProductInCart(headphone, cartCount.headphones, 'headphone-in-cart');
+        } else {
+          createAndDisplayProductInCart(headphone, cartCount.headphones, 'headphone-in-cart');
+        }
+    } else if (cartCount.armbands > 0) {
+      let elementArmband = document.getElementById('watch-in-cart');
+      if (elementArmband) {
+        elementArmband.remove();
+        createAndDisplayProductInCart(armband, cartCount.armbands, 'armband-in-cart');
+      } else {
+        createAndDisplayProductInCart(armband, cartCount.armbands, 'armband-in-cart');
+      }
+    } 
+
+    let totalPriceInCart = document.getElementById('total-price');
+    if (totalPriceInCart) {
+      totalPriceInCart.remove();
+      calculateTotalPriceAndDisplayInCart(cartCount);
+    } else {
+      calculateTotalPriceAndDisplayInCart(cartCount);
+    }
+
+    //total price ne fonctionne pas
   });
 });
 
-let createAndDisplayProductInCart = function (product, quantity) {
-
-  let title = document.createElement('div');
-  title.innerHTML = `<div id="cart-title-product">${ product.name }</div> `;
-
-  let quantityHtml = document.createElement('div');
-  quantityHtml.innerHTML = `Qté: <span id="cart-nb-products">${ quantity }</span>`
-
-  let price = document.createElement('div');
-  price.innerHTML = `Prix : <span id="cart-price"> ${ product.price  } € </span>`;
-
-  let hr = document.createElement('hr');
-
-  cartDisplay.appendChild(title);
-  cartDisplay.appendChild(quantityHtml);
-  cartDisplay.appendChild(price);
-  cartDisplay.appendChild(hr);
-}
-
-let calculateTotalPriceAndDisplayInCart = function (nbOfProductByProduct) {
-
-  let totalPrice = 0;
-
-  for (let i = 0; i < nbOfProductByProduct.length; i++) {
-    let element = nbOfProductByProduct[i];
-
-    switch (element) {
-      case 'watch': 
-        totalPrice +=  watch.price * nbOfProductByProduct.watches;
-        break;
-      case 'headphone':
-        totalPrice +=  headphome.price * nbOfProductByProduct.headphomes;
-        break;
-      case 'armband':
-        totalPrice +=  armbands.price * nbOfProductByProduct.armbands;
-        break;
-    }
-  }
-
-  let totalPriceHtml = document.createElement('div');
-  totalPriceHtml.innerHTML = `Prix total : <span id="cart-price-total"> ${ totalPrice } € </span>`;
-
-  cartDisplay.appendChild(totalPriceHtml);
-}
-
-calculateTotalPriceAndDisplayInCart(cartCount);
-
-
 cartIcon.addEventListener('click', (event) => {
-
-  // event.preventDefault();
-  //si le produit.value est supérieur à => le créer ! 
-  if (cartCount.watches > 0) {
-    createAndDisplayProductInCart(watch, cartCount.watches);
-  } else if (cartCount.headphones > 0) {
-    createAndDisplayProductInCart(headphone, cartCount.headphones);
-  } else if (cartCount.armbands > 0) {
-    createAndDisplayProductInCart(armband, cartCount.armbands);
-  } 
 
   if (cartDisplay.style.display == 'none') {
     cartDisplay.style.display = 'block';
+
   } else {
     cartDisplay.style.display = 'none';
   }
+
 });
 
 
-
 //A faire : 
-// Les elements ne doivent pas se dupliquer 
 // le panier doit rester sur les autres pages 
