@@ -1,10 +1,16 @@
+//Les formulaires d'achats
 let formsBuy = document.querySelectorAll('form[data-buy]');
 
+//Le panier affiché
 let cartDisplay = document.querySelector('.cart-display');
+
+//L'icon du panier
 let cartIcon = document.getElementById('cart-icon');
 
-// let filterNav = document.querySelector('.filter-nav');
+//Compteur à côté de l'icon
+let nbProductCartHtml = document.getElementById('nb-products-cart');
 
+// Création d'un gabarit produit
 class Products {
 
   constructor(name, price) {
@@ -14,10 +20,12 @@ class Products {
 
 }
 
+//création des produits
 let watch = new Products('Montre Run\'Zik S Plus', '250');
 let headphone = new Products('Casque', '199');
 let armband = new Products('Brassard', '19');
 
+//compteur du nombre de produit
 let cartCount = {
   watches: 0,
   headphones: 0,
@@ -25,7 +33,7 @@ let cartCount = {
 };
 
 
-
+//fonction qui sert à créer et afficher le produit dans le panier
 let createAndDisplayProductInCart = function (product, quantity, id) {
 
   let title = document.createElement('div');
@@ -50,6 +58,7 @@ let createAndDisplayProductInCart = function (product, quantity, id) {
   cartDisplay.insertBefore(container, parentRef);
 }
 
+//fonction qui sert à calculer le prix total et l'afficher dans le panier
 let calculateTotalPriceAndDisplayInCart = function (nbOfProductByProduct) {
 
   let totalPrice = 0;
@@ -76,8 +85,7 @@ let calculateTotalPriceAndDisplayInCart = function (nbOfProductByProduct) {
   cartDisplay.appendChild(totalPriceHtml);
 }
 
-let nbProductCartHtml = document.getElementById('nb-products-cart');
-
+// parcourir les formulaires d'achats
 formsBuy.forEach(form => {
   form.addEventListener('submit', (event) => {
 
@@ -147,11 +155,11 @@ formsBuy.forEach(form => {
     }
 
     // localStorage.setItem('salut', 'value');
-
     
   });
 });
 
+// mettre un écouteur sur l'icon du panier
 cartIcon.addEventListener('click', (event) => {
 
   if (cartDisplay.style.display == 'none') {
