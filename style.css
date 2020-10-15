@@ -764,6 +764,11 @@ body {
   margin-left: 20px;
 }
 
+#total {
+  text-align: center;
+  font-size: 1.2em;
+}
+
 form {
   margin: 50px 0;
 }

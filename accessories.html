@@ -1,174 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="images/logo-favicon-run-zik.png" />
-
+  
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;600;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-	<title>Run'Zik - Accessoires</title>
+  <title>Run'Zik - Accessoires</title>
 </head>
 <body>
-    <div class="filter-nav"></div>
-    <!-- Header-small -->
-    <header class="header">
-      <div class="navbar">
-        <div class="container-navbar">
-          <a href="index.html"> 
-            <img src="images/logotype.png" alt="Logotype de Run'Zik">
-          </a>
-          <div class="burger-nav">
-            Menu
-          </div>
-          <div class="nav">
-            <a href="#" class="weight-bold products active">Nos produits</a>
-            <div class="nav-products">
-              <div class="nav-product-bloc">
-                <a href="connected-watch.html">
-                  <img src="images/montre_connecte_red.jpg" alt="Montre connectée de Run'zik">
-                  <span class="nav-product-bloc-text weight-semi-bold">Montres connectées</span>
-                </a>
-              </div>
-              <div class="nav-product-bloc">
-                <a href="headphones.html">
-                  <img src="images/running_woman_red.jpeg" alt="Casque de Run'zik">
-                  <span class="nav-product-bloc-text weight-semi-bold">Casques</span>
-                </a>
-              </div>
-              <div class="nav-product-bloc">
-                <a href="accessories.html" class="active">
-                  <img src="images/brassard.jpg" alt="Brassard de Run'zik">
-                  <span class="nav-product-bloc-text weight-semi-bold">Accessoires</span>
-                </a>
-              </div>
+  <div class="filter-nav"></div>
+  <!-- Header-small -->
+  <header class="header">
+    <div class="navbar">
+      <div class="container-navbar">
+        <a href="index.html"> 
+          <img src="images/logotype.png" alt="Logotype de Run'Zik">
+        </a>
+        <div class="burger-nav">
+          Menu
+        </div>
+        <div class="nav">
+          <a href="#" class="weight-bold products active">Nos produits</a>
+          <div class="nav-products">
+            <div class="nav-product-bloc">
+              <a href="connected-watch.html">
+                <img src="images/montre_connecte_red.jpg" alt="Montre connectée de Run'zik">
+                <span class="nav-product-bloc-text weight-semi-bold">Montres connectées</span>
+              </a>
             </div>
-            <a href="about.html" class="weight-bold">Qui sommes-nous ?</a>
-            <a href="revendeur.html">Revendeurs</a>
-            <a href="assistance.html" class="weight-light">Assistance</a>
-            <a href="#" class="weight-light"><i class="fa fa-cart-plus fa-2x"></i></a>
+            <div class="nav-product-bloc">
+              <a href="headphones.html">
+                <img src="images/running_woman_red.jpeg" alt="Casque de Run'zik">
+                <span class="nav-product-bloc-text weight-semi-bold">Casques</span>
+              </a>
+            </div>
+            <div class="nav-product-bloc">
+              <a href="accessories.html" class="active">
+                <img src="images/brassard.jpg" alt="Brassard de Run'zik">
+                <span class="nav-product-bloc-text weight-semi-bold">Accessoires</span>
+              </a>
+            </div>
+          </div>
+          <a href="about.html" class="weight-bold">Qui sommes-nous ?</a>
+          <a href="revendeur.html">Revendeurs</a>
+          <a href="assistance.html" class="weight-light">Assistance</a>
+          <div class="dropdown">
+            <a href="" class="weight-light" id="cart-link">
+              <span class="fa fa-cart-plus fa-2x" id="nb-cart-items"></span>
+            </a>
+            <div class="dropdown-content">
+              <h2 class="title-medium center">Votre Panier</h2>
+              <div id="panier">
+                
+              </div>
+              <p id="total"></p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="jumbotron-small">
-        <div class="container">
-          <div class="jumbotron-small-presentation">
-            <h1 class="jumbotron-small-presentation-title">
-              Accessoires
-            </h1>
-            <p class="jumbotron-small-presentation-text">
-              Peu importe l'heure, seule compte la magie de l'instant.
-            </p>
-          </div>
+    </div>
+    <div class="jumbotron-small">
+      <div class="container">
+        <div class="jumbotron-small-presentation">
+          <h1 class="jumbotron-small-presentation-title">
+            Accessoires
+          </h1>
+          <p class="jumbotron-small-presentation-text">
+            Peu importe l'heure, seule compte la magie de l'instant.
+          </p>
         </div>
       </div>
-    </header>
-
-
-	
-	
-    
-    <div class="container">
-      <img src="images/trekz_air.jpg" class="img_product">
-      <div class="contained_right">
-          <h1 class="title-medium">Casque</h1>
-          <p>Style et performance </p>
-          <p class="price">199€</p>
-          <a href="revendeur.html" class="btn">Acheter</a>
-          <hr class="line">
-          <h2 class="title-small">EFFECTUEZ VOS ACHATS EN TOUTE CONFIANCE</h2>
-          <p>Une garantie de 2 ans pièces et main d’oeuvre.
-  La livraison rapide entre 24h et 48h vous permet de profiter au plus vite de nos produits.</p>
+    </div>
+  </header>
+  
+  
+  
+  
+  
+  <div class="container">
+    <img src="images/trekz_air.jpg" class="img_product">
+    <div class="contained_right">
+      <h1 class="title-medium" id="product-name">brassard Zik+ Run Belt</h1>
+      <p>Style et performance </p>
+      <p>
+        <span class="price" id="product-price">75</span>€
+      </p>
+      <a href="revendeur.html" class="btn" data-product-id="armband">Acheter</a>
+      <hr class="line">
+      <h2 class="title-small">EFFECTUEZ VOS ACHATS EN TOUTE CONFIANCE</h2>
+      <p>Une garantie de 2 ans pièces et main d’oeuvre.
+        La livraison rapide entre 24h et 48h vous permet de profiter au plus vite de nos produits.</p>
       </div>
-        <nav class="container-navbar-small">
-          <h2 class="title-small">DESCRIPTION</h2>
-          <h2 class="title-small">POINTS CLÉS</h2>
-          <h2 class="title-small">CONTENU DE LA BOITE</h2>
-        </nav>
+      <nav class="container-navbar-small">
+        <h2 class="title-small">DESCRIPTION</h2>
+        <h2 class="title-small">POINTS CLÉS</h2>
+        <h2 class="title-small">CONTENU DE LA BOITE</h2>
+      </nav>
       <div class="container">
         <div class="line1">
-            <p class="contained_right">Vous qui aimez courir en musique, le brassard Zik+ Run Belt noir vous accompagne
-              pour vos entraînements de courses à pied. Mince et ultra-léger, il se fait oublier pour
-              que vous restiez à l'aise et concentré sur vos performances.
-              Ce brassard Zik+ Run Belt 5ème génération est confectionné en néoprène et fixe le
-              cordon d'écouteurs pour un confort d'utilisation en toutes circonstances. En plus de
-              pouvoir accueillir le récepteur Nike +, son logo réfléchissant vous apporte une
-              visibilité améliorée par faible luminosité.
-            </p>
-            <img src="images/trekz_air_2.jpg" alt="sportif avec les écouteur run'zik au dessus des oreilles" class="img_product">
+          <p class="contained_right">Vous qui aimez courir en musique, le brassard Zik+ Run Belt noir vous accompagne
+            pour vos entraînements de courses à pied. Mince et ultra-léger, il se fait oublier pour
+            que vous restiez à l'aise et concentré sur vos performances.
+            Ce brassard Zik+ Run Belt 5ème génération est confectionné en néoprène et fixe le
+            cordon d'écouteurs pour un confort d'utilisation en toutes circonstances. En plus de
+            pouvoir accueillir le récepteur Nike +, son logo réfléchissant vous apporte une
+            visibilité améliorée par faible luminosité.
+          </p>
+          <img src="images/trekz_air_2.jpg" alt="sportif avec les écouteur run'zik au dessus des oreilles" class="img_product">
         </div>
         <div class="line2">
-              <p class="contained-left">Avantages <br>
-                Brassard spécial Zik+ Run Belt <br>
-                Matière Néoprène: Confort <br>
-                Velcro réglable: Ajustement <br>
-                Vitre plastique: Protection</p>
-              <img src="images/trekz_air.jpg" alt="photos de femme qui court"class="img_product">
+          <p class="contained-left">Avantages <br>
+            Brassard spécial Zik+ Run Belt <br>
+            Matière Néoprène: Confort <br>
+            Velcro réglable: Ajustement <br>
+            Vitre plastique: Protection</p>
+            <img src="images/trekz_air.jpg" alt="photos de femme qui court"class="img_product">
+          </div>
+          
         </div>
-       
+      </div>
     </div>
-  </div>
-  </div>
-			  <!-- footer -->
-
+    <!-- footer -->
+    
     <footer class="footer">
       <div class="footer-first-bar">
-       <div class="container container-footer-first-bar">
-        <div class="bar-text">
-          <a href="#">
-            <span class="weight-bold">
-              + de 50 revendeurs
-           </span> 
-          </a>
-          <br>
-          <a href="#">
-            <span class="weight-light">
-              En France
-            </span>
-          </a>
+        <div class="container container-footer-first-bar">
+          <div class="bar-text">
+            <a href="#">
+              <span class="weight-bold">
+                + de 50 revendeurs
+              </span> 
+            </a>
+            <br>
+            <a href="#">
+              <span class="weight-light">
+                En France
+              </span>
+            </a>
+          </div>
+          <div class="bar-text">
+            <a href="#">
+              <span class="weight-bold">
+                2 ans de garanties
+              </span> 
+            </a>
+            <br>
+            <a href="#">
+              <span class="weight-light">
+                Sur tous les produits
+              </span>
+            </a>
+          </div>
+          <div class="bar-text">
+            <a href="#">
+              <span class="weight-bold">
+                Livraison rapide
+              </span> 
+            </a>
+            <br>
+            <a href="#">
+              <span class="weight-light">
+                24/48h
+              </span>
+            </a>
+          </div>
         </div>
-        <div class="bar-text">
-          <a href="#">
-            <span class="weight-bold">
-              2 ans de garanties
-            </span> 
-          </a>
-          <br>
-          <a href="#">
-            <span class="weight-light">
-              Sur tous les produits
-            </span>
-          </a>
-        </div>
-        <div class="bar-text">
-          <a href="#">
-            <span class="weight-bold">
-              Livraison rapide
-            </span> 
-          </a>
-          <br>
-          <a href="#">
-            <span class="weight-light">
-              24/48h
-            </span>
-          </a>
-        </div>
-       </div>
       </div>
-
+      
       <div class="footer-second-bar">
         <div class="container container-second-bar">
           <div>
             <a href="#">Mentions légales</a>
           </div>
-  
+          
           <div class="socials">
             <a href="#"><span class="fa fa-pinterest fa-3x"></span></a>
             <a href="#"><span class="fa fa-facebook fa-3x"></span></a>
             <a href="#"><span class="fa fa-twitter-square fa-3x"></span></a>
           </div>
-  
+          
           <div>
             <a href="#">Conditions générales <br>
               de ventes
@@ -176,11 +189,11 @@
           </div>
         </div>
       </div>
-
+      
       <div class="footer-last-bar">
         © 2019 - 2020 Run'Zik SAS
       </div>
     </footer>
- <script src="js/burger.js"></script>
-</body>
-</html>
+    <script src="js/burger.js"></script>
+  </body>
+  </html>
