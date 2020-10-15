@@ -38,15 +38,14 @@ let cart = {
     return totalQuantity;
   }
 }
+
 window.addEventListener('load', function(){
   if(localStorage.getItem('cart') != null){
     cart.productList = JSON.parse(localStorage.getItem('cart'));
     console.log(cart);
-    localStorage.removeItem('cart');
     nbCartItems.innerHTML = cart.getTotalQuantity();
     showCart();
   }
-  
 });
 
 
@@ -83,10 +82,10 @@ btnBuy.addEventListener('click', function(e){
         picture.src = 'images/montre_connectee_2.jpg';
       }
       if(product.id == 'headphone'){
-        picture.src = 'images/trekz_air_2.jpg';
+        picture.src = 'images/running_woman_red.jpeg';
       }
       if(product.id == 'armband'){
-        picture.src = 'images/brassard_2.jpg';
+        picture.src = 'images/brassard.jpg';
       }
       
       picture.className = 'miniature';
