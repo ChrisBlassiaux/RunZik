@@ -4,7 +4,7 @@ let btnBuy = document.getElementsByClassName('btn')[0];
 let nbItems = 0;
 
 //Objet cart
-let cart = {
+const cart = {
   productList: [],
   getProductExist(product){
     let indexProductExist = -1;
@@ -42,12 +42,10 @@ let cart = {
 window.addEventListener('load', function(){
   if(localStorage.getItem('cart') != null){
     cart.productList = JSON.parse(localStorage.getItem('cart'));
-    console.log(cart);
     nbCartItems.innerHTML = cart.getTotalQuantity();
     showCart();
   }
 });
-
 
 btnBuy.addEventListener('click', function(e){
   e.preventDefault();
@@ -70,12 +68,10 @@ btnBuy.addEventListener('click', function(e){
   });
   
   function showCart(){
-    let nb = 0;
     for(product of cart.productList){
-      nb++;
       let elem = document.createElement('div');
       elem.className = 'item-panier';
-      elem.id= ''+product.id+nb;
+      elem.id= ''+product.id;
       
       let picture = document.createElement('img');
       if(product.id == 'watch'){
@@ -120,11 +116,14 @@ btnBuy.addEventListener('click', function(e){
     }
   }
   
-  function deleteCartItem(){
-    console.log(cart.productList);
-    let parent = this.parentNode;
-    cart.productList.splice(parent.id, 1);
-    console.log(cart.productList);
+  function deleteCartItem(e){
+    console.log(e.target.parentNode.parentNode);
+    let parent = e.target.parentNode.parentNode;
+    for (let product in cart.productList){
+      if(cart.productList[product].id == parent.id){
+        cart.productList.splice(product, 1);
+      }
+    }
     nbCartItems.textContent = cart.getTotalQuantity();
     document.getElementById('total').innerHTML = 'Total : ' + cart.getTotalPrice() + '€';
     hideCart();
